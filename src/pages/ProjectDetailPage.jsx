@@ -25,19 +25,26 @@ export default function ProjectDetailPage() {
               <span>{project.type.nome}</span>
             </div>
             <div className="card-body text-secondary">
-              <h5 className="card-title d-inline-block me-2">{project.nome}</h5>
-              {project.technologies.map((technology) => {
-                return (
-                  <span
-                    key={technology.id}
-                    className="badge rounded-pill me-1"
-                    style={{ backgroundColor: `${technology.colore}` }}
-                  >
-                    {technology.nome}
-                  </span>
-                );
-              })}
-              <p className="card-text">{project.riassunto}</p>
+              <div className="d-flex justify-content-between align-items-center mt-2">
+                <div>
+                  <h5 className="card-title d-inline-block me-2">
+                    {project.nome}
+                  </h5>
+                  {project.technologies.map((technology) => {
+                    return (
+                      <span
+                        key={technology.id}
+                        className="badge rounded-pill me-1"
+                        style={{ backgroundColor: `${technology.colore}` }}
+                      >
+                        {technology.nome}
+                      </span>
+                    );
+                  })}
+                </div>
+                <span>{project.cliente}</span>
+              </div>
+              <p className="card-text mt-3">{project.riassunto}</p>
             </div>
           </div>
         )}
