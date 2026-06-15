@@ -36,7 +36,7 @@ export default function ProjectDetailPage() {
 
         {/* PROJECT */}
 
-        {project && (
+        {!isLoading && project && (
           <>
             <h1 className="mb-3">{project.nome}</h1>
             <div className="card border-secondary mb-3">
