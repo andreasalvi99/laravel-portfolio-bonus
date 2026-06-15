@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 export default function HomePage() {
   const [projects, setProjects] = useState([]);
@@ -25,6 +26,11 @@ export default function HomePage() {
                   <div className="card-body">
                     <h5 className="card-title">{project.nome}</h5>
                     <p>{project.cliente}</p>
+                    <Link to={"/" + project.id}>
+                      <button className="btn btn-outline-dark btn-sm">
+                        Scopri di più
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
