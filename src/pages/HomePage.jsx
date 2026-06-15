@@ -17,7 +17,7 @@ export default function HomePage() {
   return (
     <section id="projects">
       <div className="container mt-5">
-        <div className="row row cols 2">
+        <div className="row row-cols-2 g-3">
           {projects.map((project) => {
             return (
               <div key={project.id} className="col">
